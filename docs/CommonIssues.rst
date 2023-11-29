@@ -5,6 +5,7 @@ Most common issues and how to troubleshoot them
 These are some of the most common issues captured by users when seting up or running *ALPypeOpt*:
 
 * You missed implementing ``ALPypeOptClientController`` required methods.
+* You get a `ClassCastException` when running the example models.
 
 If you face an issue that doesn't appear in this list and are unable to solve it, feel free to raise it `here <https://github.com/users/MarcEscandell/projects/1/views/2>`_ as others might benefit from it. 
 
@@ -43,3 +44,16 @@ From the *python* side you will be able to read:
 * You forgot to implement ``ALPypeOptClientController`` functions. This is a more visual error, as it will be highlighted during your AnyLogic model compilation. In a way that is good, because it indicates clearly that you are missing something. You'll see something like:
 
 For both case, you might want to review how it is done :ref:`here <The AnyLogic Connector>`.
+
+*******************************************************************
+You get a `ClassCastException` when running the **example models**
+*******************************************************************
+
+Some people has reported a `CastClassExeption` error when running the example models without any modification made on their side. This is due to a dependency on the AnyLogic version that exported the ``ALPypeLibrary`` and the uploader. To avoid this problem, ``ALPypeLibrary`` has been exported for different AnyLogic versions. Please ensure to use the right one. 
+
+In case you continue facing an exception of this sort, do not hesitate to reach out to `marcescandellmari@gmail.com <mailto:marcescandellmari@gmail.com>`_ to seek for help.
+
+Here's a screenshot of the error:
+
+.. image:: images/cast_exception.png
+	:alt: AnyLogic Cast Exception error

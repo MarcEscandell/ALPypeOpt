@@ -41,7 +41,7 @@ def simulation(x, reset=True):
     # Because of that, value must be negated
     return -model_output.getTotalRevenue()
 
-# Setup and execute sequential optimmization model
+# Setup and execute black box optimmization model
 res = gp_minimize(simulation,         # the function to minimize
                   bounds,             # the bounds on each dimension of x
                   acq_func="EI",      # the acquisition function

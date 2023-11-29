@@ -41,7 +41,7 @@ def simulation(x, reset=True):
     # Because of that, value must be negated
     return model_output.getTotalRevenue()
 
-# Setup and execute sequential optimmization model
+# Setup and execute black box optimmization model
 def objective(trial):
     x = [
         trial.suggest_float('dec1 flow allocation', 0.01, 0.99),

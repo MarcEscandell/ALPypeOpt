@@ -5,10 +5,10 @@ How to optimize your simulation model. The GPP example.
 .. note:: 
     You may find the source code of the *Gas Processing Plant* `here <https://github.com/MarcEscandell/ALPypeOpt/tree/main/alpypeopt/examples/gas_processing_plant>`__.
 
-In this page, you will learn how to setup the **python script** where the **sequential optimization** will be executed. To prove the concept, only a few optimizers have been selected: *scikit-optimize*, *optuna*, *hyperopt* and *bayesian optimization*.
+In this page, you will learn how to setup the **python script** where the **black box optimization** will be executed. To prove the concept, only a few optimizers have been selected: *scikit-optimize*, *optuna*, *hyperopt* and *bayesian optimization*.
 
 .. note:: 
-    You may use other *sequential optimization* packages of your choice. The exact setup for each will depend on its requirements.
+    You may use other *black box optimization* packages of your choice. The exact setup for each will depend on its requirements.
 
 In summary, in any *optimization experiment* that you build using *ALPypeOpt*, you should be:
 
@@ -137,7 +137,7 @@ Finally, the optimizer can be set and executed. Depending on the solver, other p
 
     .. code-block:: python
 
-        # Setup and execute sequential optimmization model
+        # Setup and execute black box optimmization model
         res = gp_minimize(simulation,         # the function to minimize
                           bounds,             # the bounds on each dimension of x
                           acq_func="EI",      # the acquisition function

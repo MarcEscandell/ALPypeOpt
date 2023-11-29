@@ -10,7 +10,7 @@ setup(name='alpypeopt',
       license='Apache License, Version 2.0',
       author='Marc Escandell Mari',
       author_email='marcescandellmari@gmail.com',
-      description='An open source library for connecting AnyLogic models with python-based sequential optimization packages',
+      description='An open source library for connecting AnyLogic models with python-based black box optimization packages',
       long_description=long_description,
       long_description_content_type="text/markdown",
       python_requires='>=3.9',
@@ -19,5 +19,10 @@ setup(name='alpypeopt',
       keywords='alpypeopt',
       install_requires=[
             'py4j'
-      ]
+      ],
+      extras_require={
+            'docs': [
+                'sphinx_rtd_theme'
+            ]
+        }
 )

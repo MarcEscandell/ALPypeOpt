@@ -1,19 +1,19 @@
 # ALPypeOpt
 
-**ALPypeOpt** or _AnyLogic Python Pipe for Optimization_ is an open source library for connecting **AnyLogic** simulation models with python-based **sequential optimization** packages such as `scikit-optimize`, `optuna` , `hyperopt` and `bayesian optmization`.
+**ALPypeOpt** or _AnyLogic Python Pipe for Optimization_ is an open source library for connecting **AnyLogic** simulation models with python-based **black box optimization** packages such as `scikit-optimize`, `optuna` , `hyperopt` and `bayesian optmization`.
 
 ![ALPypeOpt example](resources/images/alpypeopt_gpp_example.png)
 
 With **ALPypeOpt** you will be able to:
 
-* Connect your AnyLogic model to a *sequential optimization* package of your choice (e.g. scikit-optimize ``skopt``).
+* Connect your AnyLogic model to a *black box optimization* package of your choice (e.g. scikit-optimize ``skopt``).
 * **(IN PROGRESS)** Scale your optimization loop by launching many AnyLogic models simultaneously (*requires an exported model*).
 * Debug your AnyLogic models during optimization loop (*this special feature improves the user experience during model debugging remarkably*).
 * Leverage on the AnyLogic rich visualization as the optimization runs (*which ties to the previous bullet point*).
 
 There is a more comprehensive [documentation](https://alpypeopt.readthedocs.io/en/latest/) available that includes numerous examples to help you understand the basic functionalities in greater detail.
 
-_NOTE: ALPypeOpt has been engineered as a framework that is independent of any specific sequential optimization package. This design facilitates its compatibility with a wide range of state-of-the-art optimization packages._
+_NOTE: ALPypeOpt has been engineered as a framework that is independent of any specific black box optimization package. This design facilitates its compatibility with a wide range of state-of-the-art optimization packages._
 
 ## Environments
 
@@ -36,7 +36,7 @@ To use **ALPypeOptConnector** in _AnyLogic_, you can add the [library](https://g
 
 _Note: This is not a package that is currently backed by the AnyLogic support team._
 
-* The python package `alpypeopt` doesn't require any additional dependencies other that the sequential optimization package of your choice:
+* The python package `alpypeopt` doesn't require any additional dependencies other that the black box optimization package of your choice:
 
     * _E.g._: ``scikit-optimize``
 
@@ -96,7 +96,7 @@ def simulation(x, reset=True):
     # Because of that, value must be negated
     return -model_output.getTotalRevenue()
 
-# Setup and execute sequential optimmization model
+# Setup and execute black box optimmization model
 res = gp_minimize(simulation,         # the function to minimize
                   bounds,             # the bounds on each dimension of x
                   acq_func="EI",      # the acquisition function

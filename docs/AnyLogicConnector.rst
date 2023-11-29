@@ -22,7 +22,7 @@ To begin, you must add the **ALPypeOpt Connector Library** to your AnyLogic *Pal
 .. image:: images/add_new_library_anylogic_palette.png
     :alt: Add new library to AnyLogic Palette
 
-Once you have located the green cross, click on it and select *Manage Libraries…*. Then, click on the *Add* button and select the :download:`ALPypeOptLibrary.jar <../bin/ALPypeOptLibrary.jar>` file.
+Once you have located the green cross, click on it and select *Manage Libraries…*. Then, click on the *Add* button and select the :download:`ALPypeLibrary.jar <../bin/anylogic-8.8/ALPypeLibrary.jar>` file. Note that this is a link to download a library that was generated and is **only compatible with AnyLogic 8.8.x**. There is also a link :download:`ALPypeLibrary.jar <../bin/anylogic-8.7/ALPypeLibrary.jar>`  to the library **compatible with AnyLogic 8.7.x**.
 
 .. image:: images/add_new_library_anylogic_window.png
     :alt: Add new library to AnyLogic Window
@@ -79,7 +79,7 @@ You can now drag and drop 2 new functions. Their arguments and return types must
 .. image:: images/interface_impl.png
     :alt: Interface implementation
 
-* ``boolean setupAndRun(Object modelConfig)``: This function is called by the *optimization algorithm* so the AnyLogic model (or simulation) consumes the  values (that come from the python sequential optimizer) and subsequently runs until the end (whichever simulation lenght has been defined). The argument of the function is of a generic type ``Object`` so any custom class defined by the consumer (AnyLogic model) can be passed. 
+* ``boolean setupAndRun(Object modelConfig)``: This function is called by the *optimization algorithm* so the AnyLogic model (or simulation) consumes the  values (that come from the python black box optimizer) and subsequently runs until the end (whichever simulation lenght has been defined). The argument of the function is of a generic type ``Object`` so any custom class defined by the consumer (AnyLogic model) can be passed. 
   
   In the *Gas Processing Plant* example, a tailored-to-the problem class has been created: ``GPPSetup``. This class contains functionalities to help set and manage data related to the specific problem of a *GPP*. For example, there are methods available such as ``setFlowAllocRateToDec1(double flowAllocFractionToDec1)`` and ``setDecTemperatures(double dec1Temperature, double dec2Temperature)``. However, to be able to access such methods, the ``modelConfig`` argument must be parsed to the right type. In order for such parsing to work, additional configuration must be implemented and followed on the python side. The works of it will be explained later. Here's the AnyLogic function body (as an example):
 

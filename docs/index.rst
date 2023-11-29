@@ -1,7 +1,7 @@
 Welcome to **ALPypeOpt** documentation!
 =======================================
 
-**ALPypeOpt** or *AnyLogic Python Pipe for Optimization* is an open source library for connecting **AnyLogic** simulation models with state-of-the-art **sequential optimization** frameworks such as ``scikit-optimize``, ``optuna`` , ``hyperopt`` and ``bayesian optmization``.
+**ALPypeOpt** or *AnyLogic Python Pipe for Optimization* is an open source library for connecting **AnyLogic** simulation models with state-of-the-art **black box optimization** frameworks such as ``scikit-optimize``, ``optuna`` , ``hyperopt`` and ``bayesian optmization``.
 
 .. toctree::
    :maxdepth: 2

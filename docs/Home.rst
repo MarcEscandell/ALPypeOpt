@@ -5,14 +5,14 @@ ALPypeOpt
 **ALPypeOpt** or *AnyLogic Python Pipe for Optimization* is an open source library that will allow you to create and run optimization experiments using simulations build in the AnyLogic software. AnyLogic is a powerful software that is used to develop high-fidelity system simulations that can represent reality in as much detail as the developer desires.
 
 .. important::
-    *Sequential optimization* is a mathematical field that is constantly evolving and improving. The aim of **ALPypeOpt** is to create a framework that is agnostic to the solver and facilitates the integration with as many state-of-the-art optimization packages as possible written in python.
+    *Black box optimization* is a mathematical field that is constantly evolving and improving. The aim of **ALPypeOpt** is to create a framework that is agnostic to the solver and facilitates the integration with as many state-of-the-art optimization packages as possible written in python.
 
 ***********
 Features
 ***********
 With **ALPypeOpt** you will be able to:
 
-* Connect your AnyLogic model to a *sequential optimization* package of your choice (e.g. scikit-optimize ``skopt``).
+* Connect your AnyLogic model to a *black box optimization* package of your choice (e.g. scikit-optimize ``skopt``).
 * **(IN PROGRESS)** Scale your optimization loop by launching many AnyLogic models simultaneously (*requires an exported model*).
 * Debug your AnyLogic models during optimization loop (*this special feature improves the user experience during model debugging remarkably*).
 * Leverage on the AnyLogic rich visualization as the optimization runs (*which ties to the previous bullet point*).
@@ -31,7 +31,7 @@ Environments
 Installation
 ************
 
-* You must add ``ALPypeOptConnector`` in your **AnyLogic Palette**. Download the **jar** file :download:`here<../bin/ALPypeOptLibrary.jar>` and follow the :ref:`instructions<The AnyLogic Connector>`.
+* You must add ``ALPypeOptConnector`` in your **AnyLogic Palette**. Download the **jar** file :download:`here<../bin/anylogic-8.8/ALPypeLibrary.jar>` and follow the :ref:`instructions<The AnyLogic Connector>`.
 
     .. image:: images/alpypeopt_library.png
         :alt: ALPypeOpt Library
@@ -55,7 +55,7 @@ Requirements
 .. note::
     This is not a package that is currently backed by the AnyLogic support team.
 
-* Besides the python package ``alpypeopt``, you will need to install your *sequential optimization* package of choice (e.g. scikit-optimize ``skopt``)
+* Besides the python package ``alpypeopt``, you will need to install your *black box optimization* package of choice (e.g. scikit-optimize ``skopt``)
 
 ********************
 General architecture

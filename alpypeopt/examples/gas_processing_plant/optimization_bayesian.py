@@ -38,7 +38,7 @@ def simulation(x, reset=True):
     # Because of that, value must be negated
     return model_output.getTotalRevenue()
 
-# Setup and execute sequential optimmization model
+# Setup and execute black box optimmization model
 def simulation_with_named_args(dec1_flow_allocation, dec1_temperature, dec2_temperature):
     x = [dec1_flow_allocation, dec1_temperature, dec2_temperature]
     return simulation(x)
